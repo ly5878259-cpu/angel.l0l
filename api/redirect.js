@@ -137,7 +137,7 @@ export default function handler(req, res) {
 
     <!-- Main Box -->
     <div class="box">
-      <div class="angel">😇</div>
+      <div class="angel">💸</div>
       <h1>Angel is guiding you...</h1>
       <p>Please wait while we prepare your link</p>
       <div id="timer">${delay}</div>
@@ -161,4 +161,5 @@ export default function handler(req, res) {
   </body>
   </html>
   `);
+
 }
