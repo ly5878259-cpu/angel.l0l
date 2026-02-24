@@ -5,7 +5,7 @@ export default function handler(req, res) {
     return res.status(400).send("Missing 'to' parameter");
   }
 
-  const delay = 10;
+  const delay = 15;
 
   res.setHeader("Content-Type", "text/html");
 
