@@ -138,8 +138,8 @@ export default function handler(req, res) {
     <!-- Main Box -->
     <div class="box">
       <div class="angel">💸</div>
-      <h1>Angel is guiding you...</h1>
-      <p>Please wait while we prepare your link</p>
+      <h1>😁 Aoviding from getting found by luarmor...</h1>
+      <p>🔗 Bypassing your link</p>
       <div id="timer">${delay}</div>
     </div>
 
