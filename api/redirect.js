@@ -138,7 +138,7 @@ export default function handler(req, res) {
     <!-- Main Box -->
     <div class="box">
       <div class="angel">💸</div>
-      <h1> Avoid getting detected </h1>
+      <h1>✅ Avoid getting detected </h1>
       <p> Bypassing your link</p>
       <div id="timer">${delay}</div>
     </div>
