@@ -5,7 +5,7 @@ export default function handler(req, res) {
     return res.status(400).send("Missing 'to' parameter");
   }
 
-  const delay = 10; // countdown seconds
+  const delay = 15; // countdown seconds
 
   res.setHeader("Content-Type", "text/html");
 
@@ -144,8 +144,8 @@ export default function handler(req, res) {
     <!-- Main Box -->
     <div class="box">
       <img id="angel-img" src="https://cdn.discordapp.com/attachments/1475714943033802906/1476164609319768094/5C7558E7-2E1A-4F6B-9F19-464672F9D6D7.png?ex=69a020ec&is=699ecf6c&hm=3d06e0de9d30b55d16c71ac8c1b0947456f57eb55e20a9d8137631217a16c291&" class="angel-img">
-      <h1>Angel is guiding you...</h1>
-      <p>Please wait while we prepare your link</p>
+      <h1>🪽 Avoiding getting detected </h1>
+      <p>⏱️ Please wait while we prepare your link</p>
       <div id="timer">${delay}</div>
     </div>
 
