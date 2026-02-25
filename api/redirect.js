@@ -43,6 +43,9 @@ export default function handler(req, res) {
         width: 150px;
         border-radius: 20px;
         animation: float 3s ease-in-out infinite;
+        display: block;
+        margin: 0 auto;
+        opacity: 0; /* hidden until loaded */
       }
 
       h1 {
@@ -141,15 +144,22 @@ export default function handler(req, res) {
 
     <!-- Main Box -->
     <div class="box">
-      <img src="https://cdn.discordapp.com/attachments/1475714943033802906/1476164609319768094/5C7558E7-2E1A-4F6B-9F19-464672F9D6D7.png" class="angel-img">
-      <h1>🪽Aovid getting detected</h1>
-      <p>⏱️Bypassing your link</p>
+      <img id="angel-img" src="https://cdn.discordapp.com/attachments/1475714943033802906/1476164609319768094/5C7558E7-2E1A-4F6B-9F19-464672F9D6D7.png" class="angel-img">
+      <h1>🪽Avoid getting found</h1>
+      <p>Please wait while we prepare your link</p>
       <div id="timer">${delay}</div>
     </div>
 
     <script>
+      // Show image only after fully loaded
+      const img = document.getElementById('angel-img');
+      img.onload = () => {
+        img.style.opacity = 1; // fade in
+      }
+
+      // Countdown timer
       let timeLeft = ${delay};
-      const timer = document.getElementById("timer");
+      const timer = document.getElementById('timer');
 
       const countdown = setInterval(() => {
         timeLeft--;
