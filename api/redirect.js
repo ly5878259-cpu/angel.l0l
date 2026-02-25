@@ -5,7 +5,7 @@ export default function handler(req, res) {
     return res.status(400).send("Missing 'to' parameter");
   }
 
-  const delay = 15;
+  const delay = 15; // countdown seconds
 
   res.setHeader("Content-Type", "text/html");
 
@@ -14,7 +14,6 @@ export default function handler(req, res) {
   <html>
   <head>
     <title>Angel Redirect</title>
-
     <style>
       body {
         margin: 0;
@@ -39,8 +38,10 @@ export default function handler(req, res) {
         animation: fadeIn 1s ease-in-out;
       }
 
-      .angel {
-        font-size: 80px;
+      /* Center Image */
+      .angel-img {
+        width: 150px;
+        border-radius: 20px;
         animation: float 3s ease-in-out infinite;
       }
 
@@ -55,6 +56,7 @@ export default function handler(req, res) {
         font-weight: bold;
       }
 
+      /* Clouds */
       .cloud {
         position: absolute;
         background: white;
@@ -87,6 +89,7 @@ export default function handler(req, res) {
         right: 20px;
       }
 
+      /* Sparkles */
       .sparkle {
         position: absolute;
         width: 5px;
@@ -96,9 +99,10 @@ export default function handler(req, res) {
         animation: sparkle 3s infinite;
       }
 
+      /* Animations */
       @keyframes float {
         0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-10px); }
+        50% { transform: translateY(-15px); }
       }
 
       @keyframes moveCloud {
@@ -137,9 +141,9 @@ export default function handler(req, res) {
 
     <!-- Main Box -->
     <div class="box">
-      <div class="angel">💸</div>
-      <h1>⏱️ Avoid getting detected </h1>
-      <p> ⏳ Bypassing your link</p>
+      <img src="https://cdn.discordapp.com/attachments/1475714943033802906/1476164609319768094/5C7558E7-2E1A-4F6B-9F19-464672F9D6D7.png" class="angel-img">
+      <h1>🪽Aovid getting detected</h1>
+      <p>⏱️Bypassing your link</p>
       <div id="timer">${delay}</div>
     </div>
 
@@ -161,5 +165,4 @@ export default function handler(req, res) {
   </body>
   </html>
   `);
-
 }
